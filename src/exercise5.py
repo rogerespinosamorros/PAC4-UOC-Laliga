@@ -1,6 +1,5 @@
 # Fem les importacions necesàrries, llibreries primer
 import pandas as pd
-import matplotlib.pyplot as plt
 # Importem funció de càrrega de dades
 from exercise1 import load_and_eda
 
@@ -45,7 +44,7 @@ def fun_total_points(data: pd.DataFrame) -> tuple[pd.Series, pd.DataFrame]:
     # Convertim a dataframe reininciant els índexs
     df_total_points = total_points.reset_index()
     # Renombrem el nom de les columnes
-    df_total_points.columns = ["Teams", "Total_Points"]
+    df_total_points.columns = ["Team", "Total_Points"]
     # Tornem el df en forma de tupla, amb una variable Series i una variable df
     return total_points, df_total_points
 
@@ -55,7 +54,7 @@ def alltime_winner(df_total_points: pd.DataFrame) -> str:
     Return the all time winner.
     """
     # Definim l'equip guanyador, el primer valor que trobem dins de "Team" (en aquest hem vist que és el Barça)
-    winner = df_total_points.iloc[0]["Teams"]
+    winner = df_total_points.iloc[0]["Team"]
     # Retornem el guanyador
     return winner
 
