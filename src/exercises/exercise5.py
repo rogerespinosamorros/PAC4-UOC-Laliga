@@ -1,7 +1,7 @@
 # Fem les importacions necesàrries, llibreries primer
 import pandas as pd
 # Importem funció de càrrega de dades
-from exercise1 import load_and_eda
+from src.exercises.exercise1 import load_and_eda
 
 
 # Definim la funció add_points

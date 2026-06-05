@@ -1,7 +1,7 @@
 # Importem configuració del config.py
 import config
 # Hem d'importar la funció de càrrega de dades de l'exercici 1
-from exercise1 import load_and_eda
+from src.exercises.exercise1 import load_and_eda
 # Importem llibreries necessàries
 import pandas as pd
 import matplotlib.pyplot as plt

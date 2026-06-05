@@ -4,9 +4,9 @@ import matplotlib.pyplot as plt
 # Importem arxiu de configuració
 import config
 # Importem la funció de l'exercici1, de la càrrega de dades
-from exercise1 import load_and_eda
+from src.exercises.exercise1 import load_and_eda
 # També necessitarem la funció fun_total_points de l'exercici5 i també add_points
-from exercise5 import fun_total_points, add_points
+from src.exercises.exercise5 import fun_total_points, add_points
 
 # Definim la funció fun_total_goals
 def fun_total_goals(data: pd.DataFrame) -> tuple[int, int, int]:

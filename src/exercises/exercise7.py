@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 # Importem arxiu de configuració
 import config
 # Importem la funció de l'exercici1, de la càrrega de dades
-from exercise1 import load_and_eda
+from src.exercises.exercise1 import load_and_eda
 
 
 # Definim la funció graf

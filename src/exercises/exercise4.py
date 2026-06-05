@@ -3,7 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 # Funcions necessàries de l'arxiu config.py
 import config
-from exercise1 import load_and_eda
+from src.exercises.exercise1 import load_and_eda
 
 # Definim la funció on tindrem els partits guanyats a casa, a fora i els empats
 def FTR(data: pd.DataFrame) -> pd.DataFrame:

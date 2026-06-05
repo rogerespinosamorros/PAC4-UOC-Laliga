@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 # Importem l'arxiu de configuració
 import config
 # Carreguem el dataset amb la funció de l'exercici 1
-from exercise1 import load_and_eda
+from src.exercises.exercise1 import load_and_eda
 
 # Definim la funció goals_distribution(data) com indica l'enunciat 
 # Retorna una tupla perquè conté dos dataframes, un per l'equip local i un per l'equip visitant
