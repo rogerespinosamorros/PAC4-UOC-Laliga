@@ -3,7 +3,6 @@ import pandas as pd
 import matplotlib.pyplot as plt
 # Funcions necessàries de l'arxiu config.py
 import config
-from src.exercises.exercise1 import load_and_eda
 
 # Definim la funció on tindrem els partits guanyats a casa, a fora i els empats
 def FTR(data: pd.DataFrame) -> pd.DataFrame:
@@ -39,21 +38,3 @@ def plot_FTR(ftr: pd.DataFrame) -> None:
     # Mostrem el gràfic
     plt.show()
 
-# Així, permetem reutilitzar i cridar les funcions i no tot l'arxiu en altres llocs, i també
-# permetem que el codi només s'executi quan executem aquest arxiu directament, i no quan importem les funcions en altres arxius
-if __name__ == "__main__":
-    # Carreguem el dataset
-    data = load_and_eda("data/LaLiga_Matches.csv")
-    # Funció FTR
-    ftr = FTR(data)
-    # Anem a comprovar el percentatge de victòries a casa
-    # Obtenim les files de partits jugats a casa, i agafem el primer element de la fila (que és H)
-    wins_at_home = ftr.loc[ftr["Result"] == "H", "Matches"].iloc[0]
-    # Contem els partits totals jugats
-    total_matches = ftr["Matches"].sum()
-    # Calculem el percentatge
-    wins_home_percentage = (wins_at_home / total_matches) * 100
-    # Imprimim el percentatge
-    print(f"Home win percentage: {wins_home_percentage:.2f}%")
-    # Mostrem el gràfic de la funció plot_FTR
-    plot_FTR(ftr)
