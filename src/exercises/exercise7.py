@@ -4,8 +4,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 # Importem arxiu de configuració
 import config
-# Importem la funció de l'exercici1, de la càrrega de dades
-from src.exercises.exercise1 import load_and_eda
+
 
 
 # Definim la funció graf
@@ -67,36 +66,3 @@ def graf(data: pd.DataFrame, five_teams_selected: list[str]) -> None:
 
 
 
-# Així, permetem reutilitzar i cridar les funcions i no tot l'arxiu en altres llocs, i també
-# permetem que el codi només s'executi quan executem aquest arxiu directament, i no quan importem les funcions en altres arxius
-if __name__ == "__main__":
-    # Carreguem el dataset
-    data = load_and_eda("data/LaLiga_Matches.csv")
-
-    # Definim els 5 equips que millor puntuació tenen
-    five_teams_selected = [
-        "Barcelona",
-        "Real Madrid",
-        "Ath Madrid",
-        "Valencia",
-        "Ath Bilbao"
-    ]
-    # La funció graf
-    graf(data, five_teams_selected)
-
-
-    # # Filtrem l'informació on els equips de casa estan a la llista dels 5 equips i igual quan juguen a fora
-    # filtered_data = data[data["HomeTeam"].isin(five_teams_selected) & data["AwayTeam"].isin(five_teams_selected)]
-    # # Definim els enfrontaments entre ells. Anem recorrent les files i es queda amb els partits on coincideixen equips de la llista filtrada.
-    # # Independentment de si juguen a casa o fora, si coincideixen es crea la connexió. El .apply(axis=1) recorrer el df fila per fila.
-    # # La fila es guarda a 'row', i creem una llista amb els enfrontaments, el sorted ordena alfabèticament. Un cop ordenat, ho guardem en tuples.
-    # # No importa si és Barça-Madrid o Madrid-Barça, es quedarà guardat com Barça-Madrid(connexió). Amb value_counts contem la cantidad de connexions.
-    # # Tot i les dues línies de codi que venen, per obtenir les connexions hi ha hagut mols intents per fer-ho correctament (i crec que ho estan)
-    # filtered_data["Matchup"] = filtered_data.apply(
-    #     lambda row: tuple(sorted([row["HomeTeam"], row["AwayTeam"]])), axis=1)
-
-    # connections = (filtered_data["Matchup"].value_counts().reset_index())
-    # connections.columns = ["Teams", "Connections"]
-    # print(connections)
-
-    # El bloc superior comentat, han sigut comprovacions fetes per obtenir les coincidències entre els 5 equips que demanava l'enunciat

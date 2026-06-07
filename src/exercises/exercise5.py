@@ -1,7 +1,5 @@
 # Fem les importacions necesàrries, llibreries primer
 import pandas as pd
-# Importem funció de càrrega de dades
-from src.exercises.exercise1 import load_and_eda
 
 
 # Definim la funció add_points
@@ -59,27 +57,3 @@ def alltime_winner(df_total_points: pd.DataFrame) -> str:
     return winner
 
 
-# Així, permetem reutilitzar i cridar les funcions i no tot l'arxiu en altres llocs, i també
-# permetem que el codi només s'executi quan executem aquest arxiu directament, i no quan importem les funcions en altres arxius
-if __name__ == "__main__":
-    # Carreguem el dataset
-    data = load_and_eda("data/LaLiga_Matches.csv")
-    # Funció add_points i imprimim els 10 primers valors per pantalla, amb la informació que volem
-    data = add_points(data)
-    print(
-        data[
-            [
-                "HomeTeam",
-                "AwayTeam",
-                "FTR",
-                "points_home",
-                "points_away"
-            ]
-    ].head(10)
-)
-    # Funció fun_total_points
-    total_points, df_total_points = fun_total_points(data)
-    print(df_total_points.head(10))
-    # Funció alltime_winner
-    winner = alltime_winner(df_total_points)
-    print(f"Team with most accumulated points: {winner}")

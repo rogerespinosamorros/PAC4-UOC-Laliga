@@ -3,10 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 # Importem arxiu de configuració
 import config
-# Importem la funció de l'exercici1, de la càrrega de dades
-from src.exercises.exercise1 import load_and_eda
-# També necessitarem la funció fun_total_points de l'exercici5 i també add_points
-from src.exercises.exercise5 import fun_total_points, add_points
+
 
 # Definim la funció fun_total_goals
 def fun_total_goals(data: pd.DataFrame) -> tuple[int, int, int]:
@@ -117,37 +114,6 @@ def podium(summary_1996_2025: pd.DataFrame) -> None:
 
 
 
-# Així, permetem reutilitzar i cridar les funcions i no tot l'arxiu en altres llocs, i també
-# permetem que el codi només s'executi quan executem aquest arxiu directament, i no quan importem les funcions en altres arxius
-if __name__ == "__main__":
-    # Carreguem el dataset
-    data = load_and_eda("data/LaLiga_Matches.csv")
-    # Apliquem la funció add_points de l'exercici 5 (error anterior)
-    data = add_points(data)
-    # Funció fun_total_goals
-    home_goals, away_goals, total_goals = fun_total_goals(data)
-
-    print(f"Home goals: {home_goals}")
-    print(f"Away goals: {away_goals}")
-    print(f"Total goals: {total_goals}")
-
-    # Funció fun_total_goals_by_team
-    (team_home_goals, team_away_goals, total_goals_by_team) = fun_total_goals_by_team(data)
-    print(total_goals_by_team.head(10))
-
-    # Hem de cridar la funció fun_total_points de l'exercici 5 per crear el summary
-    total_points, df_total_points = (fun_total_points(data))
-    # Funció fun_summary_1996_2025
-    summary_1996_2025 = fun_summary_1996_2025(
-        df_total_points,
-        team_home_goals,
-        team_away_goals,
-        total_goals_by_team
-    )
-    print(summary_1996_2025.head(10))
-
-    # Funció podium
-    podium(summary_1996_2025)
 
 
 
