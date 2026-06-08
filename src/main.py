@@ -1,6 +1,20 @@
+"""
+Main file to execute all PAC4 exercises.
+"""
 # Utilitzarem argparse que tenia algun coneixement anteriorment. També he consultat: https://docs.python.org/3/library/argparse.html
 # La documentació oficial de python argparse, crec que és més robust i manipulable que sys
 import argparse
+from exercises.exercise1 import(load_and_eda, plot_home_away_goals)
+from exercises.exercise2 import(total_matches, plot_matches_team_total)
+from exercises.exercise3 import(goals_distribution, plot_goals_distribution)
+from exercises.exercise4 import(FTR, plot_FTR)
+from exercises.exercise5 import(add_points, fun_total_points, alltime_winner)
+from exercises.exercise6 import(
+    fun_total_goals, fun_total_goals_by_team, fun_summary_1996_2025, podium
+    )
+from exercises.exercise7 import(graf)
+
+
 # Definim un 'parser', amb argument 'ArgumentParser' que s'encarrega d'interpretar els comandos de la terminal
 # 'description' és un text que apareixerà, és informatiu simplement.
 parser = argparse.ArgumentParser(description="Execute exercises PAC4")
@@ -21,10 +35,9 @@ else:
 
 
 # Execucions de les funcions dels exercicis
-# Exercici 1
-from exercises.exercise1 import(load_and_eda, plot_home_away_goals)
 # Execucions exercici 1, funció load_and_eda
-data = load_and_eda("data/LaLiga_Matches.csv") # Càrrega del dataset sempre en un inici fora de l'execució de l'exercici 1
+# Càrrega del dataset sempre en un inici fora de l'execució de l'exercici 1
+data = load_and_eda("data/LaLiga_Matches.csv")
 # Si escrivim a la terminal --ex 1, executarà l'exercici 1
 if ex >= 1:
     print(data.head())
@@ -32,8 +45,6 @@ if ex >= 1:
     plot_home_away_goals(data)
 
 
-# Exercici 2
-from exercises.exercise2 import(total_matches, plot_matches_team_total)
 # Si escrivim a la terminal --ex 2, executarà l'exercici 2 i anteriors
 if ex >= 2:
     # Execucions exercici 2, funció total_matches
@@ -49,8 +60,6 @@ if ex >= 2:
     plot_matches_team_total(total_matches_by_team)
 
 
-# Exercici 3
-from exercises.exercise3 import(goals_distribution, plot_goals_distribution)
 # Si escrivim a la terminal --ex 3, executarà l'exercici 3 i anteriors
 if ex >= 3:
     # Execucions exercici 3, funció goals_distribution
@@ -64,8 +73,6 @@ if ex >= 3:
 
 
 
-# Exercici 4
-from exercises.exercise4 import(FTR, plot_FTR)
 # Si escrivim a la terminal --ex 4, executarà l'exercici 4 i anteriors
 if ex >= 4:
     # Execucions exercici 4, funció FTR
@@ -82,8 +89,6 @@ if ex >= 4:
 
 
 
-# Exercici 5
-from exercises.exercise5 import(add_points, fun_total_points, alltime_winner)
 # Si escrivim a la terminal --ex 5, executarà l'exercici 5 i anteriors
 if ex >= 5:
     # Execucions exercici 5, funció add_points
@@ -100,8 +105,6 @@ if ex >= 5:
 
 
 
-# Exercici 6
-from exercises.exercise6 import(fun_total_goals, fun_total_goals_by_team, fun_summary_1996_2025, podium)
 # Si escrivim a la terminal --ex 6, executarà l'exercici 6 i anteriors
 if ex >= 6:
     # Execucions exercici 6, funció fun_total_goals
@@ -110,7 +113,7 @@ if ex >= 6:
     print(f"Away goals: {away_goals}")
     print(f"Total goals: {total_goals}")
     # Funció fun_total_goals_by_team
-    team_home_goals, team_away_goals, total_goals_by_team = (fun_total_goals_by_team(data))
+    team_home_goals, team_away_goals, total_goals_by_team = fun_total_goals_by_team(data)
     print("\nTotal goals by team")
     print(total_goals_by_team.head(10))
     # Funció fun_summary_1996_2025
@@ -126,8 +129,7 @@ if ex >= 6:
 
 
 
-# Exercici 7
-from exercises.exercise7 import(graf)
+
 # Si escrivim a la terminal --ex 7, executarà l'exercici 7 i anteriors
 if ex >= 7:
     # Execucions exercici 7, funció graf
