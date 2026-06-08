@@ -5,7 +5,7 @@ Sisè exercici. Càlcul dels gols per equip i realització d'un summary.
 import pandas as pd
 import matplotlib.pyplot as plt
 # Importem arxiu de configuració
-from src import config
+import config
 
 
 # Definim la funció fun_total_goals

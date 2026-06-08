@@ -6,7 +6,7 @@ import networkx as nx
 import pandas as pd
 import matplotlib.pyplot as plt
 # Importem arxiu de configuració
-from src import config
+import config
 
 
 

@@ -5,7 +5,8 @@ Primer exercici. Càrrega dataset i anàlisis exploratori.
 import pandas as pd
 import matplotlib.pyplot as plt
 # Importem l'arxiu de configuració
-from src import config
+import config
+
 # Definim la primera funció de l'exercici load_and_eda
 def load_and_eda(file: str) -> pd.DataFrame:
     """
