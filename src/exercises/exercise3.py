@@ -1,3 +1,6 @@
+"""
+Tercer exercici. Observació de la distribució dels gols.
+"""
 # Importem les llibreries
 import pandas as pd
 import matplotlib.pyplot as plt

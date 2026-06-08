@@ -1,3 +1,6 @@
+"""
+Quart exercici. Partits guanyats pels equips de casa i de fora.
+"""
 # Primer de tot fem els imports que es necessitin, aquí llibreries
 import pandas as pd
 import matplotlib.pyplot as plt

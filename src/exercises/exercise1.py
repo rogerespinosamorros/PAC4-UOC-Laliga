@@ -1,4 +1,6 @@
-# Primer exercici
+"""
+Primer exercici. Càrrega dataset i anàlisis exploratori.
+"""
 # Importem llibreries primer de tot
 import pandas as pd
 import matplotlib.pyplot as plt

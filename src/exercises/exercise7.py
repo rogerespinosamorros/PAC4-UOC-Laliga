@@ -1,3 +1,6 @@
+"""
+Setè exercici. Realització d'un graf entre els cinc millors equips.
+"""
 # Hem instalat networkx i importem llibreries necessàries
 import networkx as nx
 import pandas as pd

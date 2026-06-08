@@ -1,3 +1,6 @@
+"""
+Sisè exercici. Càlcul dels gols per equip i realització d'un summary.
+"""
 # Importem les llibreries que utilitzarem
 import pandas as pd
 import matplotlib.pyplot as plt

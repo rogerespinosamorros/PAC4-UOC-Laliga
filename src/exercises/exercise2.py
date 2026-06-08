@@ -1,3 +1,6 @@
+"""
+Segon exercici. Observació dels partits jugats.
+"""
 # Importem les llibreries necessàries
 import pandas as pd
 import matplotlib.pyplot as plt
