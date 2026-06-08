@@ -1,8 +1,11 @@
+"""
+Tercer exercici. Observació de la distribució dels gols.
+"""
 # Importem les llibreries
 import pandas as pd
 import matplotlib.pyplot as plt
 # Importem arxiu de configuració
-import config
+from src import config
 
 # Definim la funció de l'exercici 3, goals_distribution, on retornarà una tupla amb dos dataframes
 def goals_distribution(data: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:

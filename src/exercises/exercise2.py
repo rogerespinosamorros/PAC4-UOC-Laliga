@@ -1,8 +1,11 @@
+"""
+Segon exercici. Observació dels partits jugats.
+"""
 # Importem les llibreries necessàries
 import pandas as pd
 import matplotlib.pyplot as plt
 # Importem arxiu de configuració
-import config
+from src import config
 
 
 

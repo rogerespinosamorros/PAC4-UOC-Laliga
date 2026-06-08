@@ -1,9 +1,12 @@
+"""
+Setè exercici. Realització d'un graf entre els cinc millors equips.
+"""
 # Hem instalat networkx i importem llibreries necessàries
 import networkx as nx
 import pandas as pd
 import matplotlib.pyplot as plt
 # Importem arxiu de configuració
-import config
+from src import config
 
 
 

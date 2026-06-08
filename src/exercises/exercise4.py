@@ -1,8 +1,11 @@
+"""
+Quart exercici. Partits guanyats pels equips de casa i de fora.
+"""
 # Primer de tot fem els imports que es necessitin, aquí llibreries
 import pandas as pd
 import matplotlib.pyplot as plt
 # Funcions necessàries de l'arxiu config.py
-import config
+from src import config
 
 # Definim la funció on tindrem els partits guanyats a casa, a fora i els empats
 def FTR(data: pd.DataFrame) -> pd.DataFrame:

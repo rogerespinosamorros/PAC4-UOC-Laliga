@@ -1,10 +1,11 @@
-# Primer exercici
+"""
+Primer exercici. Càrrega dataset i anàlisis exploratori.
+"""
 # Importem llibreries primer de tot
 import pandas as pd
 import matplotlib.pyplot as plt
 # Importem l'arxiu de configuració
-import config
-
+from src import config
 # Definim la primera funció de l'exercici load_and_eda
 def load_and_eda(file: str) -> pd.DataFrame:
     """

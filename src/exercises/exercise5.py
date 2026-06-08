@@ -1,3 +1,6 @@
+"""
+Cinquè exercici. Càlcul dels punts aconseguits per cada equip.
+"""
 # Fem les importacions necesàrries, llibreries primer
 import pandas as pd
 
