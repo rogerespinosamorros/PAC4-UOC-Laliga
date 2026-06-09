@@ -1,7 +1,7 @@
 """
 Main file to execute all PAC4 exercises.
 """
-# Utilitzarem argparse que tenia algun coneixement anteriorment. També he consultat: https://docs.python.org/3/library/argparse.html
+# Utilitzarem argparse que tenia algun coneixement anteriorment.
 # La documentació oficial de python argparse, crec que és més robust i manipulable que sys
 import argparse
 from exercises.exercise1 import(load_and_eda, plot_home_away_goals)

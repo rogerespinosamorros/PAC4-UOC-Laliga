@@ -1,0 +1,1 @@
+# Arxiu que inicialitza els exercicis fets d'una manera modular.
